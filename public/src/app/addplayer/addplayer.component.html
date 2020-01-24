@@ -1,0 +1,7 @@
+<form (submit)="addPlayer()">
+    <div class="alert alert-danger" role="alert" *ngIf="errors.name">{{errors.name.message}}</div> 
+    <input required type="text" name="player.name" [(ngModel)]="newPlayer.name"/>
+    <div class="alert alert-danger" role="alert" *ngIf="errors.preferedPosition">{{errors.preferedPosition.message}}</div> 
+    <input required type="text" name="player.preferedPosition" [(ngModel)]="newPlayer.preferedPosition"/>
+    <input type="submit" value="Add Player"/>    
+</form>
