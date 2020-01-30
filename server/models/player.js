@@ -4,6 +4,7 @@ const { Schema } = mongoose;
 const playerSchema = new Schema(
   {
     name: { type: String, required: [true, "Name is required"], minlength: 2, maxlength:15 },
+    age: { type: Integer, required:false},
     preferedPosition: {type: String, required:[true, "Preffered Position is required"]}
   },
   { timestamps: true }
